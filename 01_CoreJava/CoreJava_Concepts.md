@@ -3,3 +3,4 @@
 2. [JavaBasics](./JavaBasics.docx)
 3. [Array&Collectionsframework](./Array&CollectionsFramework.docx)
 4. [Multithreading](./Multithreading.docx)
+5. [MethodsInjava](./MethodsInJava.docx)
