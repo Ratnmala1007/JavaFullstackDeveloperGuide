@@ -6,3 +6,4 @@
 4. page 14-16 [Abstraction]
 5. page 16-20 [Interface]
 6. page 20-23[Encapsulation]
+1.[Classes&objects](./Oops_concepts.docx/)
