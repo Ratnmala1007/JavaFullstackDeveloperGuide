@@ -27,7 +27,11 @@ This repository contains well-structured notes covering **Core Java, Spring,Spri
 - Track progress through Git and GitHub  
 - Easily share with peers or recruiters
 
+
+✍️ *I am making these notes while studying; it’s still a work in progress.*
+
 ---
+
 
 ⭐ *Maintained by Ratnamala Shendge*  
 📅 *Last Updated: October 2025*
