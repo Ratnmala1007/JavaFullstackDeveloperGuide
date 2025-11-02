@@ -33,5 +33,5 @@ This repository contains well-structured notes covering **Core Java, Spring,Spri
 ---
 
 
-⭐ *Maintained by Ratnamala Shendge*  
+⭐ *Maintained by Ratnmala Shendge*  
 📅 *Last Updated: October 2025*
