@@ -18,7 +18,7 @@ This repository contains well-structured notes covering **Core Java, Spring,Spri
 9. [Frontend Technologies-Angular](./08_Angular/)
 10. [Interview Preparation](./10_InterviewPrep/)
 11. [Projects](./11_Projects/)
-12. [ools and Git](./09_ToolsAndGit/)
+12. [T00ls and git](./12_ToolsAndGit/)
 13. [Frontend Technologies-React](./07_React/)
 
 ---
@@ -36,4 +36,4 @@ This repository contains well-structured notes covering **Core Java, Spring,Spri
 
 
 ⭐ *Maintained by Ratnmala Shendge*  
-📅 *Last Updated: October 2025*
+📅 *Last Updated: Nov 2025*
