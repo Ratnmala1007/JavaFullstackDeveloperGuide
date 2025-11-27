@@ -7,6 +7,7 @@ public class FactorialNum {
 	            return 1;
 	        else
 	            return n * factorial(n - 1);  // Recursive call
+				//System.out.println("hi");unreachable code
 	    }
 
 	    public static void main(String[] args) {
