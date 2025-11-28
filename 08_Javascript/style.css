@@ -6,7 +6,7 @@
 .heading{
     color: aqua;
     text-decoration-style: dotted;
-}
+}*/
 .box{
    height: 100px; 
    width: 100px;
@@ -14,4 +14,12 @@
    margin: 5px;
    text-align: center;
    background-color: aquamarine;
-} */
+} 
+ /* .content{
+    background-color: rgb(38, 0, 255);
+
+ }
+ .newcontent{
+    background-color: brown;
+
+ } */

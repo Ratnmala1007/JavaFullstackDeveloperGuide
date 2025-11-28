@@ -141,12 +141,22 @@
 
 // }
 
-let newheading = document.createElement("h1");
-newheading.innerHTML = "<i> Hi,I am new!</i>";
-document.querySelector("body").prepend(newheading);
+// let newheading = document.createElement("h1");
+// newheading.innerHTML = "<i> Hi,I am new!</i>";
+// document.querySelector("body").prepend(newheading);
 
-let newButton = document.createElement("button");
-newButton.innerText = "click me";
-newButton.style.color = "white";
-newButton.style.backgroundColor = "red";
-document.querySelector("body").prepend(newButton);
+// let newButton = document.createElement("button");
+// newButton.innerText = "click me";
+// newButton.style.color = "white";
+// newButton.style.backgroundColor = "red";
+// document.querySelector("body").prepend(newButton);
+
+
+// let para = document.querySelector("p");
+let btn1= document.querySelector("#btn1");
+btn1.onclick = ()=>{
+    console.log("btn1 was clicked");
+    let a=20;
+    a++;
+    console.log(a);
+}
