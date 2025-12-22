@@ -2,9 +2,9 @@ name: Spring Boot CI
 
 on:
   push:
-    branches: [ "main" ]        # Trigger when you push to main
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]        # Trigger on PR to main
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -21,6 +21,5 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        working-directory: cicd-demo      # Important: your Spring Boot project folder
+        working-directory: 05_Spring/cicd-demo
         run: mvn clean install
-
