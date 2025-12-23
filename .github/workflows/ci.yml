@@ -30,26 +30,27 @@ jobs:
         working-directory: 05_Spring/cicd-demo
         run: mvn clean package -DskipTests
 
-      # 5️⃣ VERIFY JAR EXISTS (IMPORTANT)
+      # 5️⃣ VERIFY JAR EXISTS
       - name: Verify JAR file
         run: |
           echo "Listing target folder"
           ls -l 05_Spring/cicd-demo/target
-          
+
+      # 6️⃣ DEBUG workspace (fixed indentation)
       - name: Debug workspace
         run: |
-         echo "Current directory:"
-         pwd
-         echo "List root:"
-            ls -l
+          echo "Current directory:"
+          pwd
+          echo "List root:"
+          ls -l
           echo "List 05_Spring:"
           ls -l 05_Spring
-         echo "List cicd-demo:"
-         ls -l 05_Spring/cicd-demo
-         echo "List target:"
-         ls -l 05_Spring/cicd-demo/target
+          echo "List cicd-demo:"
+          ls -l 05_Spring/cicd-demo
+          echo "List target:"
+          ls -l 05_Spring/cicd-demo/target
 
-      # 6️⃣ Copy JAR to EC2
+      # 7️⃣ Copy JAR to EC2
       - name: Copy JAR to EC2
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -59,7 +60,7 @@ jobs:
           source: "05_Spring/cicd-demo/target/*.jar"
           target: "/home/ubuntu/app/"
 
-      # 7️⃣ Restart Spring Boot app
+      # 8️⃣ Restart Spring Boot
       - name: Restart Spring Boot
         uses: appleboy/ssh-action@v0.1.7
         with:
