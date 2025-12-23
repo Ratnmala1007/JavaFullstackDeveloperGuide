@@ -35,6 +35,19 @@ jobs:
         run: |
           echo "Listing target folder"
           ls -l 05_Spring/cicd-demo/target
+          
+      - name: Debug workspace
+        run: |
+         echo "Current directory:"
+         pwd
+         echo "List root:"
+            ls -l
+          echo "List 05_Spring:"
+          ls -l 05_Spring
+         echo "List cicd-demo:"
+         ls -l 05_Spring/cicd-demo
+         echo "List target:"
+         ls -l 05_Spring/cicd-demo/target
 
       # 6️⃣ Copy JAR to EC2
       - name: Copy JAR to EC2
