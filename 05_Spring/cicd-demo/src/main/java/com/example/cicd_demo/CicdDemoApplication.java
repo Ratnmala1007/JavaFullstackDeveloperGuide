@@ -10,5 +10,7 @@ public class CicdDemoApplication {
 		SpringApplication.run(CicdDemoApplication.class, args);
 	}
 	// trigger ci cd
+	// trigger ci cd
+
 
 }
