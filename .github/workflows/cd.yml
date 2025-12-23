@@ -1,10 +1,9 @@
 name: Spring Boot CD
 
 on:
-  workflow_run:
-    workflows: ["Spring Boot CI"]
-    types:
-      - completed
+  push:
+    branches: [ "main" ]
+
 
 jobs:
   deploy:
