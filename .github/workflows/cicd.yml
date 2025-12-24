@@ -13,15 +13,16 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Java 21
+      # 2️⃣ Setup Java
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
 
-      # 3️⃣ Build project
+      # 3️⃣ Build Spring Boot project (IMPORTANT FIX)
       - name: Build with Maven
+        working-directory: 05_Spring/cicd-demo
         run: mvn clean package -DskipTests
 
       # 4️⃣ Copy JAR to EC2
@@ -32,10 +33,10 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
-          source: target/*.jar
+          source: 05_Spring/cicd-demo/target/*.jar
           target: /home/ubuntu/app/
 
-      # 5️⃣ Restart Spring Boot app on EC2
+      # 5️⃣ Restart app on EC2
       - name: Restart Spring Boot App
         uses: appleboy/ssh-action@v0.1.7
         with:
