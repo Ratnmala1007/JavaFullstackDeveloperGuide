@@ -22,7 +22,8 @@ jobs:
 
       # 3️⃣ Build Spring Boot project (IMPORTANT FIX)
       - name: Build with Maven
-        working-directory: 05_Spring/cicd-demo
+        working-directory: JavaFullstackDeveloperGuide/05_Spring/cicd-demo
+
         run: mvn clean package -DskipTests
 
       # 4️⃣ Copy JAR to EC2
