@@ -43,20 +43,20 @@ jobs:
           timeout: 120s
 
       # 6️⃣ Restart App
-     - name: Restart Spring Boot safely
-  uses: appleboy/ssh-action@v0.1.7
-  with:
-    host: ${{ secrets.EC2_HOST }}
-    username: ubuntu
-    key: ${{ secrets.EC2_SSH_KEY }}
-    script: |
-      echo "Checking existing app..."
-      PID=$(pgrep -f cicd-demo-0.0.1-SNAPSHOT.jar || true)
+      - name: Restart Spring Boot safely
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+           host: ${{ secrets.EC2_HOST }}
+           username: ubuntu
+           key: ${{ secrets.EC2_SSH_KEY }}
+           script: |
+            echo "Checking existing app..."
+            PID=$(pgrep -f cicd-demo-0.0.1-SNAPSHOT.jar || true)
 
-      if [ -n "$PID" ]; then
-        echo "Stopping old app PID=$PID"
-        kill -9 $PID
-        sleep 3
+              if [ -n "$PID" ]; then
+            echo "Stopping old app PID=$PID"
+              kill -9 $PID
+             sleep 3
       fi
 
       echo "Starting new app..."
