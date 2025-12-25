@@ -45,7 +45,11 @@ jobs:
         run: |
           echo "$EC2_SSH_KEY" > cicd-springboot-key.pem
           chmod 600 cicd-springboot-key.pem
-          ssh -o StrictHostKeyChecking=no -i cicd-springboot-key.pem ubuntu@13.232.109.55 "
+          ssh -o StrictHostKeyChecking=no -i cicd-springboot-key.pem \
+          ubuntu@13.232.109.55 "
             pkill -f 'cicd-demo-0.0.1-SNAPSHOT.jar' || true
             nohup java -jar cicd-demo-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
-          "
+            "
+
+
+          
