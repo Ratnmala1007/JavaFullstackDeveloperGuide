@@ -23,7 +23,7 @@ jobs:
 
       # 3️⃣ Build the Spring Boot jar
       - name: Build Spring Boot JAR
-        run: ./mvn clean package -DskipTests
+        run: mvn clean package -DskipTests
 
       # 4️⃣ Copy the jar to EC2
       - name: Copy JAR to EC2
