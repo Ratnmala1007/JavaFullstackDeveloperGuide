@@ -23,7 +23,9 @@ jobs:
 
       # 3️⃣ Build the Spring Boot jar
       - name: Build Spring Boot JAR
-        run: mvn clean package -DskipTests
+        run: |
+            cd 05_Spring/cicd-demo
+            mvn clean package -DskipTests
 
       # 4️⃣ Copy the jar to EC2
       - name: Copy JAR to EC2
@@ -32,7 +34,8 @@ jobs:
         run: |
           echo "$EC2_SSH_KEY" > cicd-springboot-key.pem
           chmod 600 cicd-springboot-key.pem
-          scp -o StrictHostKeyChecking=no -i cicd-springboot-key.pem target/cicd-demo-0.0.1-SNAPSHOT.jar ubuntu@13.232.109.55:/home/ubuntu/
+          scp -o StrictHostKeyChecking=no -i cicd-springboot-key.pem 05_Spring/cicd-demo/target/cicd-demo-0.0.1-SNAPSHOT.jar
+          ubuntu@13.232.109.55:/home/ubuntu/
 
       # 5️⃣ Restart Spring Boot app on EC2
       - name: Start app on EC2
